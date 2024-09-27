@@ -23,5 +23,8 @@ USER 1001
 # Expose port for Uptime Kuma
 EXPOSE 3001
 
+# Add Volume
+VOLUME ["/app/data"]
+
 # Run the Uptime Kuma app
 CMD ["node", "server/server.js"]
