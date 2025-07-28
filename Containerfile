@@ -13,7 +13,7 @@ RUN microdnf module -y enable nodejs:18 && \
 WORKDIR /app
 
 # Clone Git repo, npm install and update permissions
-RUN git clone --branch 1.23.X --single-branch https://github.com/louislam/uptime-kuma.git . && \
+RUN git clone --branch release-beta --single-branch https://github.com/louislam/uptime-kuma.git . && \
     npm run setup && \
     chown -R 1001:0 /app
 
